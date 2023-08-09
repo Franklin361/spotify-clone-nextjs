@@ -2,33 +2,25 @@
 
 import { TbPlaylist } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
+import useAuthModal from '@/hooks/useAuthModal';
+import useUploadModal from '@/hooks/useUploadModal';
+import { useUser } from '@/hooks/useUser';
+;
 
 
 interface LibraryProps {
     songs: any[];
 }
 
-export const Library: React.FC<LibraryProps> = ({
-    songs
-}) => {
-    //   const { user, subscription } = useUser();
-    //   const uploadModal = useUploadModal();
-    //   const authModal = useAuthModal();
-    //   const subscribeModal = useSubscribeModal();
+export const Library = () => {
+    const authModal = useAuthModal()
+    const uploadModal = useUploadModal()
+    const { user } = useUser()
 
-    //   const onPlay = useOnPlay(songs);
-
-    //   const onClick = () => {
-    //     if (!user) {
-    //       return authModal.onOpen();
-    //     }
-
-    //     if (!subscription) {
-    //       return subscribeModal.onOpen();
-    //     }
-
-    //     return uploadModal.onOpen();
-    //   }
+    const onClick = () => {
+        if (!user) return authModal.onOpen();
+        return uploadModal.onOpen()
+    }
 
     return (
         <div className="flex flex-col">
@@ -40,14 +32,12 @@ export const Library: React.FC<LibraryProps> = ({
                     </p>
                 </div>
                 <AiOutlinePlus
-                    //   onClick={onClick} 
+                    onClick={onClick}
                     size={20}
                     className="
-            text-neutral-400 
-            cursor-pointer 
-            hover:text-white 
-            transition
-          "
+                            text-neutral-400 
+                            cursor-pointer 
+                            hover:text-white transition"
                 />
             </div>
             <div className="flex flex-col gap-y-2 mt-4 px-3">
