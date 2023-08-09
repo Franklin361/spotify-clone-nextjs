@@ -1,2 +1,4 @@
 https://github.com/AntonioErdeljac/next13-spotify
-2:15:30
+2:25:15
+
+https://app.supabase.com/project/jzvclrwsetdvinxfdcpq/settings/api

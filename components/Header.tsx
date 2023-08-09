@@ -29,14 +29,17 @@ const Header: React.FC<HeaderProps> = ({
 
   const supabaseClient = useSupabaseClient();
   const { user, subscription } = useUser();
-  console.log({ user })
+
+
   const handleLogout = async () => {
     const { error } = await supabaseClient.auth.signOut();
     // player.reset();
-    router.refresh();
-
+    // router.refresh();
+    // TODO: Refresh router
     if (error) {
       toast.error(error.message);
+    } else {
+      toast.success('Loggout success!');
     }
   }
 
@@ -128,7 +131,6 @@ const Header: React.FC<HeaderProps> = ({
               </Button>
               <Button
                 onClick={() => router.push('/account')}
-                className="bg-white"
               >
                 <FaUserAlt />
               </Button>
