@@ -6,6 +6,7 @@ import ToasterProvider from '@/providers/ToastProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import getSongsByUserId from '@/actions/getSongsByUserId'
+import Player from '@/components/Player'
 
 const font = Figtree({ subsets: ['latin'] })
 
@@ -34,7 +35,7 @@ export default async function RootLayout({
             <Sidebar songs={userSongs}>
               {children}
             </Sidebar>
-            {/* <Player /> */}
+            <Player />
           </UserProvider>
         </SupabaseProvider>
       </body>
