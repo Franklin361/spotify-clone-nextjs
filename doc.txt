@@ -1,4 +1,4 @@
 https://github.com/AntonioErdeljac/next13-spotify
-3:27:04
+3:51:17 - create liked songs view
 
 https://app.supabase.com/project/jzvclrwsetdvinxfdcpq/settings/api
