@@ -1,13 +1,18 @@
 import { Price } from '../types';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL
+const VERCEL_URL = process.env.NEXT_PUBLIC_VERCEL_URL
+
 export const getURL = () => {
     let url =
-        process.env.NEXT_PUBLIC_SITE_URL ??
-        process.env.NEXT_PUBLIC_VERCEL_URL ??
+        SITE_URL ??
+        VERCEL_URL ??
         'http://localhost:3000/'
 
     url = url.includes('http') ? url : `https://${url}`;
     url = url.charAt(url.length - 1) === '/' ? url : `${url}/`
+
+    console.log({ SITE_URL, VERCEL_URL })
 
     return url
 }
