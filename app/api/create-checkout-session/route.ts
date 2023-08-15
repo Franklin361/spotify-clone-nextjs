@@ -21,7 +21,7 @@ export async function POST(
         } = await supabase.auth.getUser();
 
         const customer = await createOrRetrieveCustomer({
-            userId: user?.id || '',
+            uuid: user?.id || '',
             email: user?.email || ''
         });
 

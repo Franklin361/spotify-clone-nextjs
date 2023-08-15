@@ -19,7 +19,7 @@ export async function POST() {
         if (!user) throw Error('Could not get user');
 
         const customer = await createOrRetrieveCustomer({
-            userId: user.id || '',
+            uuid: user.id || '',
             email: user.email || ''
         });
 
