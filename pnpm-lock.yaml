@@ -7,18 +7,24 @@ dependencies:
   '@radix-ui/react-slider':
     specifier: ^1.1.2
     version: 1.1.2(@types/react-dom@18.2.4)(@types/react@18.2.7)(react-dom@18.2.0)(react@18.2.0)
+  '@stripe/stripe-js':
+    specifier: ^2.0.0
+    version: 2.0.0
   '@supabase/auth-helpers-nextjs':
     specifier: ^0.7.1
-    version: 0.7.1(@supabase/supabase-js@2.24.0)
+    version: 0.7.1(@supabase/supabase-js@2.32.0)
   '@supabase/auth-helpers-react':
     specifier: ^0.4.0
-    version: 0.4.0(@supabase/supabase-js@2.24.0)
+    version: 0.4.0(@supabase/supabase-js@2.32.0)
   '@supabase/auth-ui-react':
     specifier: ^0.4.2
-    version: 0.4.2(@supabase/supabase-js@2.24.0)
+    version: 0.4.2(@supabase/supabase-js@2.32.0)
   '@supabase/auth-ui-shared':
     specifier: ^0.1.6
-    version: 0.1.6(@supabase/supabase-js@2.24.0)
+    version: 0.1.6(@supabase/supabase-js@2.32.0)
+  '@supabase/supabase-js':
+    specifier: ^2.32.0
+    version: 2.32.0
   '@types/node':
     specifier: 20.2.5
     version: 20.2.5
@@ -717,52 +723,56 @@ packages:
     resolution: {integrity: sha512-Gfkvwk9o9kE9r9XNBmJRfV8zONvXThnm1tcuojL04Uy5uRyqg93DC83lDebl0rocZCfKSjUv+fWYtMQmEDJldg==}
     dev: false
 
-  /@supabase/auth-helpers-nextjs@0.7.1(@supabase/supabase-js@2.24.0):
+  /@stripe/stripe-js@2.0.0:
+    resolution: {integrity: sha512-SxZnf192En0uAfgbigUIj7oJYaXgGc5AI1aos59YXvO8DPeLI0AtT4oMg/Wuk17wbpquEv73+akyCe7xdEjGlA==}
+    dev: false
+
+  /@supabase/auth-helpers-nextjs@0.7.1(@supabase/supabase-js@2.32.0):
     resolution: {integrity: sha512-IVpXsKkUGZr9KlYEyCNVmUDukALc3Yj+Tp9ALKGK655KwY6+k4kSkhw20lzJqO3T456yINR5hXz+/GQUW/5J+g==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
     dependencies:
-      '@supabase/auth-helpers-shared': 0.4.0(@supabase/supabase-js@2.24.0)
-      '@supabase/supabase-js': 2.24.0
+      '@supabase/auth-helpers-shared': 0.4.0(@supabase/supabase-js@2.32.0)
+      '@supabase/supabase-js': 2.32.0
       set-cookie-parser: 2.6.0
     dev: false
 
-  /@supabase/auth-helpers-react@0.4.0(@supabase/supabase-js@2.24.0):
+  /@supabase/auth-helpers-react@0.4.0(@supabase/supabase-js@2.32.0):
     resolution: {integrity: sha512-EPsLi6r2NSZ4pyK9PTjImx9FFM+2rJoNN/I0kF3rqj2HGcFstopu9ZELKQ5Lc1humlCG4pxIdHn3564gJqIqlQ==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
     dependencies:
-      '@supabase/supabase-js': 2.24.0
+      '@supabase/supabase-js': 2.32.0
     dev: false
 
-  /@supabase/auth-helpers-shared@0.4.0(@supabase/supabase-js@2.24.0):
+  /@supabase/auth-helpers-shared@0.4.0(@supabase/supabase-js@2.32.0):
     resolution: {integrity: sha512-5wlCGb4HZ46W2fg8tdi22ZU1GAIOe3YxXrTgvAjWVapNFN+PiH5cFIbz51ZgZRK1TokRZ01pB1GEFy4e+NZE+A==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
     dependencies:
-      '@supabase/supabase-js': 2.24.0
+      '@supabase/supabase-js': 2.32.0
       jose: 4.14.4
     dev: false
 
-  /@supabase/auth-ui-react@0.4.2(@supabase/supabase-js@2.24.0):
+  /@supabase/auth-ui-react@0.4.2(@supabase/supabase-js@2.32.0):
     resolution: {integrity: sha512-NLP1udNtbteWDZYUoJKD/sDzi1BeZpS+CvUk1D0FwHevlVDT1fUf27sVLtrAgchSIQxHwZHTiUPJC9auCF3Zyw==}
     peerDependencies:
       '@supabase/supabase-js': ^2.21.0
     dependencies:
       '@stitches/core': 1.2.8
-      '@supabase/auth-ui-shared': 0.1.6(@supabase/supabase-js@2.24.0)
-      '@supabase/supabase-js': 2.24.0
+      '@supabase/auth-ui-shared': 0.1.6(@supabase/supabase-js@2.32.0)
+      '@supabase/supabase-js': 2.32.0
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@supabase/auth-ui-shared@0.1.6(@supabase/supabase-js@2.24.0):
+  /@supabase/auth-ui-shared@0.1.6(@supabase/supabase-js@2.32.0):
     resolution: {integrity: sha512-dBlP2XR5KSSCBMgkWJMkc2UVA21V5AobKmekwIiHVvyVtzAiFqE5XWJiPV+kMlnRLzFXDeA0Z/CqdKTL/Kbs4A==}
     peerDependencies:
       '@supabase/supabase-js': ^2.21.0
     dependencies:
-      '@supabase/supabase-js': 2.24.0
+      '@supabase/supabase-js': 2.32.0
     dev: false
 
   /@supabase/functions-js@2.1.1:
@@ -773,24 +783,24 @@ packages:
       - encoding
     dev: false
 
-  /@supabase/gotrue-js@2.28.1:
-    resolution: {integrity: sha512-i2IR8IRDhcrWfBjC7o5T0F8liOA1X6+moqCam6F5pIURI5PM+087hH+tDZ9dKu0AqAFgT0TpLmWK82fKWQlkfg==}
+  /@supabase/gotrue-js@2.46.2:
+    resolution: {integrity: sha512-tLyZZNEb3St6Dxe671seLCzYWZ2DftSWWjPEfqAwW6kNOAr+Aw2uEIW0H3gEJxSIST+E+ly9lUBm/rGlfDWKPA==}
     dependencies:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/postgrest-js@1.7.0:
-    resolution: {integrity: sha512-wLADHZ5jm7LljF4GigK0H2vc1wGupBY2hGYfb4fVo0UuyMftmA6tOYy+ZpMH/vPq01CUFwXGwvIke6kyqh/QDg==}
+  /@supabase/postgrest-js@1.8.0:
+    resolution: {integrity: sha512-R6leDIC92NgjyG2/tCRJ42rWN7+fZY6ulTEE+c00tcnghn6cX4IYUlnTNMtrdfYC2JYNOTyM+rWj63Wdhr7Zig==}
     dependencies:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
       - encoding
     dev: false
 
-  /@supabase/realtime-js@2.7.2:
-    resolution: {integrity: sha512-Fi6xAl5PUkqnjl3wo4rdcQIbMG3+yTRX1aUZe/yfvTG84RMvmCXJ1yN6MmafVLeZpU1xkaz5Vx4L0tnHcLiy6w==}
+  /@supabase/realtime-js@2.7.3:
+    resolution: {integrity: sha512-c7TzL81sx2kqyxsxcDduJcHL9KJdCOoKimGP6lQSqiZKX42ATlBZpWbyy9KFGFBjAP4nyopMf5JhPi2ZH9jyNw==}
     dependencies:
       '@types/phoenix': 1.6.0
       '@types/websocket': 1.0.5
@@ -807,13 +817,13 @@ packages:
       - encoding
     dev: false
 
-  /@supabase/supabase-js@2.24.0:
-    resolution: {integrity: sha512-zrAm+hp6DBICqZ7xVPk+KofmlfjJWQzXuf2sHAyPz8XVjpha84z2OVWcow2aI10YkMOrPwhRtBBQYJOnh/fx2w==}
+  /@supabase/supabase-js@2.32.0:
+    resolution: {integrity: sha512-1ShFhuOI5Du7604nlCelBsRD61daXk2O0qwjumoz35bqrYThnSPPtpJqZOHw6Mg6o7mLjIInYLh/DBlh8UvzRg==}
     dependencies:
       '@supabase/functions-js': 2.1.1
-      '@supabase/gotrue-js': 2.28.1
-      '@supabase/postgrest-js': 1.7.0
-      '@supabase/realtime-js': 2.7.2
+      '@supabase/gotrue-js': 2.46.2
+      '@supabase/postgrest-js': 1.8.0
+      '@supabase/realtime-js': 2.7.3
       '@supabase/storage-js': 2.5.1
       cross-fetch: 3.1.6
     transitivePeerDependencies:

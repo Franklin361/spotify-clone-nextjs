@@ -1,4 +1,6 @@
 https://github.com/AntonioErdeljac/next13-spotify
-4:53:19
+5:38:00
 
 https://app.supabase.com/project/jzvclrwsetdvinxfdcpq/settings/api
+https://dashboard.stripe.com/test/dashboard
+
